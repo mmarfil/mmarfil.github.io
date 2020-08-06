@@ -1,18 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="54" viewBox="0 0 53 54">
-  <defs>
-    <circle id="eye-a" cx="26.769" cy="26.154" r="26.154"/>
-    <path id="eye-c" d="M13.7289556,0.732248481 C12.5514674,1.76158585 11.8076923,3.27470315 11.8076923,4.96153844 C11.8076923,8.06282973 14.3217856,10.5769231 17.4230769,10.5769231 C18.8355423,10.5769231 20.1262055,10.0554259 21.1130278,9.19447047 C21.1905707,9.70809885 21.2307692,10.2339704 21.2307692,10.7692308 C21.2307692,16.5469789 16.5469789,21.2307692 10.7692307,21.2307692 C4.99148259,21.2307692 0.307692277,16.5469789 0.307692277,10.7692308 C0.307692277,4.99148261 4.99148259,0.307692302 10.7692307,0.307692302 C11.7971719,0.307692302 12.7904856,0.455949817 13.7289556,0.732248481 Z"/>
-  </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(-.615 .77)">
-    <mask id="eye-b" fill="#fff">
-      <use xlink:href="#eye-a"/>
-    </mask>
-    <use fill="#ECECEC" xlink:href="#eye-a"/>
-    <circle cx="29.846" cy="20.615" r="26.154" fill="#FFF" mask="url(#eye-b)"/>
-    <g mask="url(#eye-b)">
-      <g transform="translate(22.154 21.538)">
-        <use fill="#000" xlink:href="#eye-c"/>
-      </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="54px" viewBox="0 0 53 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>eye</title>
+    <defs>
+        <circle id="eye-a" cx="26.7692307" cy="26.1538462" r="26.1538462"></circle>
+        <path d="M8.80769226,3.96153844 C8.80769226,7.06282973 11.3217856,9.57692307 14.4230769,9.57692307 C16.9840914,9.57692307 19.1446787,7.86249076 19.819747,5.51871812 C20.7168386,7.06152832 21.2307692,8.85536208 21.2307692,10.7692308 C21.2307692,16.5469789 16.5469789,21.2307692 10.7692307,21.2307692 C4.99148259,21.2307692 0.307692277,16.5469789 0.307692277,10.7692308 C0.307692277,5.20128627 4.65749965,0.64929371 10.1443191,0.326048375 C9.31019504,1.30589644 8.80769226,2.57503453 8.80769226,3.96153844 Z" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="canvas" transform="translate(-110.000000, -79.000000)">
+            <g id="eye" transform="translate(109.384615, 79.769231)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#eye-a"></use>
+                </mask>
+                <use id="Mask" fill="#ECECEC" xlink:href="#eye-a"></use>
+                <circle id="Oval-1-Copy-2" fill="#FFFFFF" mask="url(#eye-b)" cx="29.8461538" cy="20.6153846" r="26.1538462"></circle>
+                <g id="eye-ball" mask="url(#eye-b)">
+                    <g transform="translate(22.153846, 21.538462)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#eye-c"></use>
+                        </mask>
+                        <use id="Combined-Shape" stroke="none" fill="#000000" fill-rule="evenodd" xlink:href="eye-c"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
     </g>
-  </g>
 </svg>
