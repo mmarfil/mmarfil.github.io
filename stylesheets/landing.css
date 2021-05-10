@@ -17,7 +17,7 @@
 }
 
 body, html {
-  font: 17px "system-ui", -apple-system, Helvetica, Arial, sans-serif;
+  font: 17px "Charter", "Palatino Linotype", "Palatino", "Book Antiqua", "Palatino LT STD", Times New Roman, serif;
   background: #fff;
   color: #666;
   font-style: normal;
@@ -61,11 +61,11 @@ a:hover {
 /* CTA */
 
 .button a.cta {
-  font-size: 13px;
-  font-weight: 500;
   background: #fff;
+  font-size: 13px;
+  font-weight: 600;
   color: var(--accent-dark);
-  padding: 6px 14px;
+  padding: 6px 14px 7px 14px;
   border: 2px solid var(--accent-light);
   border-radius: 20px;
   box-shadow: none;
@@ -75,6 +75,15 @@ a:hover {
   background: var(--accent-light);
   color: var(--accent-dark);
   border: 2px solid transparent;
+}
+
+.arrow {
+  font: 12px "system-ui", -apple-system, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  width: 12px;
+  height: 18px;
+  vertical-align: middle;
 }
 
 /* Other */
