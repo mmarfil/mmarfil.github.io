@@ -64,7 +64,7 @@
     menu.classList.remove('show');
   });
   })();
-(function() {
+{% if page.id %}(function() {
   var button = document.querySelector('#subscribe-footer');
   var menu = document.querySelector('#menu-footer');
   button.addEventListener('click', function(e) {
@@ -75,7 +75,7 @@
   document.addEventListener("click", function(){
     menu.classList.remove('show');
   });
-  })();
+  })();{% endif %}
 </script>
 </body>
 </html>
