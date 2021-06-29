@@ -5,7 +5,7 @@ title: About
 
 # Olá, I’m Marcelo.
 
-I'm a sci-fi buff, occasional guitar player and privacy advocate. I also happen to be design director at [Sketch](https://sketch.com/).
+I'm a sci-fi buff, occasional guitar player and privacy advocate. I also happen to be a design director at [Sketch](https://sketch.com/).
 
 In the past, I’ve had the pleasure of working with numerous independent developers and organizations over the last decade including Paramount Pictures, SproutCore, Acrylic, AppZapper, The Echo Nest, Taptivate, Snowman, SuperMegaUltraGroovy, Vemedio and many others.
 
