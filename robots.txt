@@ -1,0 +1,7 @@
+User-agent: *
+Sitemap: https://mmarfil.com/micro/sitemap.xml
+Crawl-delay: 1
+
+Disallow: /micro/assets
+Disallow: /micro/feed.xml
+Disallow: /micro/feed.json
