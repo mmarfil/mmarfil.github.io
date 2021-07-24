@@ -196,35 +196,7 @@ a.cta:hover {
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-
-    :root {
-      --accent-light: rgba(var(--accent-color), 0.3);
-    }
-
-    body, html {
-      background: #000;
-      color: #B3B3B3;
-    }
-
-    h1 {
-      color: #fff;
-    }
-
-    a {
-      color: #fff;
-    }
-
-    .button a.cta {
-      background: #000;
-      color: var(--accent-dark);
-      padding: 6px 14px;
-      border: 2px solid var(--accent-light);
-      border-radius: 20px;
-      box-shadow: none;
-    }
-
-  }
+/* Animation */
 
 .monster {
   -webkit-animation-name: bounce;
@@ -259,10 +231,8 @@ a.cta:hover {
   100% {
     -webkit-transform: translateY(-10px); } }
 
-/* Animation */
-
 #eye {
-  margin: 32px 0 0 32px;
+  margin: 32px 0 0 34px;
   position: absolute;
 }
 
