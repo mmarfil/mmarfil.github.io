@@ -42,6 +42,7 @@ body, html {
   text-rendering: optimizeLegibility;
   height: 100%;
   width: 100%;
+  display: block !important;
 }
 
 h1 {
