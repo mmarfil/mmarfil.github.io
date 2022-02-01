@@ -31,8 +31,9 @@ input:focus {
   outline: none;
 }
 
+
 body, html {
-  font: 17px "Charter", "Palatino Linotype", "Palatino", "Book Antiqua", "Palatino LT STD", Times New Roman, serif;
+  font: 16px "-apple-system", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: var(--secondary);
   background: #fff;
   font-style: normal;
@@ -48,6 +49,7 @@ body, html {
 h1 {
   font-size: 32px;
   font-weight: 800;
+  letter-spacing: -.02em;
   color: #000;
   margin: 0;
 }
@@ -95,7 +97,7 @@ a.cta:hover {
 
 .arrow {
   font: 12px "system-ui", -apple-system, Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-block;
   width: 12px;
   height: 18px;
