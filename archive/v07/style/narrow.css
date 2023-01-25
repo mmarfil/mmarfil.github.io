@@ -1,0 +1,62 @@
+div#quote {
+	width: 320px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 120px;
+}
+
+.text {
+	font-size: 2.6em;
+	color: #4c4c4c;
+	margin-top: 25px;
+	line-height: 40px;
+}
+
+.author {
+	font-size: 1.5em;
+	margin-top: 10px;
+	margin-bottom: 150px;
+	padding: 0;
+}
+
+div#page {
+	width: 320px;
+	margin: 0 auto 0 auto;
+}
+
+
+div#links {
+	width: 320px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+div#links p {
+	width: 320px;
+	text-align: center;
+	font-family: 'TheNews Light', serif;
+	font-size: 0.95em;
+	color: #ababab;
+}
+
+div#links a {
+	font-family: 'TheNews Bold', serif;
+	outline: none;
+	font-size: 0.95em;
+	color: #4c4c4c;
+	text-decoration: none;
+	-webkit-transition: color .22s linear;
+	-moz-transition: color .22s linear;
+	-o-transition: color .22s linear;
+}
+
+div#links a:hover {
+	color: black;
+	outline: none;
+	-webkit-transition: color .22s linear;
+	-moz-transition: color .22s linear;
+	-o-transition: color .22s linear;
+}
+

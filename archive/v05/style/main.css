@@ -1,0 +1,170 @@
+html {
+	  background: #fff;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+a {
+	color: #7e6515;
+	text-decoration: none;
+	border-bottom: 1px dotted #e0d2b6;
+	-webkit-transition: color .22s linear;
+	-moz-transition: color .22s linear;
+	-o-transition: color .22s linear;
+}
+
+a:hover {
+	color: #4f401f;
+	border-bottom: 1px dotted #887652;
+}
+
+span { 
+	visibility: hidden; 
+}
+
+img { 
+	border:none
+}
+
+::selection {
+ color: #fff;
+ color: rgba(0, 0, 0, .85);
+ background: #f9f6ef;
+}
+
+div#page { 
+	width: 330px; 
+	margin: 2px auto;
+}
+
+header {
+	width: 330px;
+}
+
+header #logo {
+	background: url(../img/logo.gif) no-repeat;
+	overflow: hidden;
+	display: block;
+	width: 46px;
+  	height: 54px;
+  	margin-top: 80px;
+  	margin-left: 140px;
+  	margin-bottom: 4px;
+  	float: left;
+}
+
+.clearfix {
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+}
+
+#content {
+  width: 330px;
+  margin: 0 auto;
+  font-size: 0.75em;
+  font-family: 'Open Sans', sans;
+  font-weight: normal;
+  color: #404040;
+  line-height: 1.8em;
+  letter-spacing: 0.7px;
+}
+
+#content .a {
+	font-size: 0.6em;
+	font-style: italic;
+	color: #a2a2a2;
+	-webkit-font-smoothing: antialiased;
+}
+
+#content .q {
+	font-size: 0.6em;
+	color: #a2a2a2;
+	font-style: italic;
+	margin-top: -30px;
+	background-color: #fff;
+	position: relative;
+	-webkit-transform: scale(1);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;
+	-webkit-font-smoothing: antialiased
+}
+
+#content .q:hover{
+	opacity: 0;
+	-webkit-transform: scale(1);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;
+}
+
+#canvas { 
+	margin-left: 8px; 
+	width:30px; 
+	padding-top: 7px; 
+}
+
+.column { 
+	margin:0; 
+	padding:0; 
+	width:3px; 
+	height:3px; 
+	float:left; 
+}
+
+#circle { 
+	background: #e1d1b1; 
+	border-radius:50%; 
+	-moz-border-radius: 50%; 
+	width: 46px; 
+	height: 46px;
+	margin-top: 80px;
+	margin-left: 140px;
+	margin-bottom: 25px;
+}
+
+.black { 
+	background: #000; 
+}
+
+.white { 
+	background: #fff; 
+}
+
+.red { 
+	background: #a13e37; 
+}
+
+.lbrown { 
+	background: #74240c;
+}
+
+.brown { 
+	background: #3b0f03;
+}
+
+.skinshadow { 
+	background: #e9b375;
+}
+
+.skin { 
+	background: #f8d8b1; 
+}
+
+.bg { 
+	background: #e1d1b1; 
+}
+
+#arrow {
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #e1d1b1;
+	position: relative;
+	margin-top: 38px;
+	margin-left: 9px;
+}

@@ -1,0 +1,11 @@
+.replace-2x {
+    font-size: 1px;
+}
+
+#header_photo {
+	height: 350px;
+	width: 100%;
+	background: url("../images/header@2x.jpg") no-repeat #d6ded1;
+	background-position: center;
+	background-size: 500px 350px;
+}

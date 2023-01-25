@@ -1,0 +1,197 @@
+html {
+  background: #fff;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: #404040;
+  outline: none;
+  -webkit-transition: color .22s linear;
+  -moz-transition: color .22s linear;
+  -o-transition: color .22s linear;
+}
+
+a:hover, a:focus, a:active { color: #979ba3; }
+img { border:none }
+h1, h2, h3 { font-family: 'Droid Serif', serif; font-weight: normal; color: #9c9c9c; }
+h2 { font-size: 1.1em; font-style: italic; margin-top: 20px; }
+h3 { font-size: 0.8em; margin-top: -10px; }
+
+
+div#page { width: 820px; margin: 2px auto; }
+header { width: 820px; }
+
+header #logo {
+  display: block;
+  margin-top: 40px;
+  margin-left: 388px;
+  margin-bottom: 4px;
+  float: left;
+}
+
+header #logo a {
+  background: url(../img/logo.gif) no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  float: left;
+  width: 46px;
+  height: 54px;
+}
+
+
+.act {
+  background: #404040;
+  padding: 3px 5px;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+nav {
+  width: 820px;
+  text-align: center;
+  float: left;
+  font: 0.8em normal 'Droid Serif', serif;
+  margin-left: -19px;
+}
+
+nav li {
+  display: inline-block;
+  font-weight: normal;
+  margin: auto 3px;
+  padding: 0px 7px;
+}
+
+nav li { color: #333; }
+
+.ampersand { font-family: Baskerville, Palatino, Georgia, serif;
+  font-style: italic;
+  font-size: 1.1em;
+} 
+
+.clearfix {
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+}
+
+/* Portfolio */
+#content #portfolio {
+  width: 820px;
+  height: 530px;
+  overflow: hidden;
+  padding: 0px !important;
+  margin-top: 25px;
+}
+
+#content #portfolio .item {
+  width: 820px;
+  height: 530px;
+  position: absolute;
+}
+
+#content #portfolio a .item-info {
+  position: absolute;
+  height: 50px;
+  top: 240px;
+  padding-left: 50px;
+  padding-right: 16px;
+  background: #000 url(../img/link.png) left center no-repeat;
+  font-family: 'Droid Sans', sans;
+  font-weight: normal;
+  color: #fff;
+  z-index: 999;
+  opacity: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#content #portfolio a .item-info h4 { 
+  font-size: 12px;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+#content #portfolio a .item-info h5 {
+  font-size: 10px;
+  font-weight: normal;
+  margin: 3px 0 0 0;
+  padding: 0;
+}
+
+#content ul#nav { list-style: none; text-align: center; padding: 0; }
+#content ul#nav li { display: inline; margin-left: 3px; }
+#content ul#nav li a { opacity: 0.4; -webkit-transition: opacity 500ms linear;  -moz-transition: opacity 500ms linear;  }
+#content ul#nav li a.activeSlide { opacity: 1.0; -webkit-transition: opacity 500ms linear;  -moz-transition: opacity 500ms linear; }
+
+#mini {
+  width: 335px;
+  margin: 0 auto;
+  font-size: 0.8em;
+  font-family: 'Droid Sans', sans;
+  font-weight: normal;
+  color: #404040;
+  line-height: 1.8em;
+}
+
+.dotted a { border-bottom: 1px dotted black; color: #000; }
+
+footer {
+  font-size: 11px;
+  color: #9c9c9c;
+  text-align: center;
+  font-family: 'Droid Sans', sans;
+  font-weight: normal;
+  line-height: 0.3em;
+  margin-top: 35px;
+}
+
+#palo {
+	background: url(../palo/palo_bg.png);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#palo #logo {
+  background: url(../palo/palo_logo.png) no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  float: left;
+  width: 128px;
+  height: 21px;
+}
+
+#palo nav li { color: #979ba3; }
+
+#palo #portfolio a .item-info {
+  position: absolute;
+  height: 50px;
+  top: 240px;
+  padding-left: 50px;
+  padding-right: 16px;
+  background: #000 url(../palo/shopping.png) left center no-repeat;
+  font-family: 'Droid Sans', sans;
+  font-weight: normal;
+  color: #fff;
+  z-index: 999;
+  opacity: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#palo #graphics {
+	background: url(../palo/palo_graphics.png);
+	width: 820px;
+	height: 530px;
+}
