@@ -151,6 +151,10 @@ a.cta:hover {
   vertical-align: middle;
 }
 
+.margin-right {
+  margin-right: 3px;
+}
+
 /* Other */
 
 .container-left {
