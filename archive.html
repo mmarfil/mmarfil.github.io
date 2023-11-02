@@ -1,0 +1,24 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+---
+
+<h1 class="archive">All Posts</h1>
+
+<ul id="archive-list">
+  {% for post in site.posts %}
+  <li>
+    <article>
+      <header>
+        <div>
+          <a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">
+            <h3>{{ post.title }}</h3>
+            <time class="dates" datetime="{{ post.date }}" class="dt-published">{{ post.date | date:"%b %-d, %Y" }}</time>
+          </a>
+        </div>
+      </header>      
+    </article>
+  </li>
+  {% endfor %}
+</ul>
