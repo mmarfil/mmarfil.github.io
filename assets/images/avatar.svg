@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>canvas</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="400" height="400" rx="200"></rect>
+        <circle id="path-3" cx="137.538797" cy="137.014917" r="137.014917"></circle>
+        <path d="M47.9582048,19.0925356 C47.9582048,35.3395979 61.1290512,48.5104442 77.3761135,48.5104442 C89.4921668,48.5104442 99.8974586,41.1858033 104.405505,30.7230051 C108.19089,38.1676733 110.323873,46.5936976 110.323873,55.5179069 C110.323873,85.7864065 85.7864064,110.323874 55.5179068,110.323874 C25.2494072,110.323874 0.71194006,85.7864065 0.71194006,55.5179069 C0.71194006,25.6241601 24.645574,1.32041311 54.3963194,0.723188393 C50.3672535,5.75820754 47.9582048,12.1440398 47.9582048,19.0925356 Z" id="path-5"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="canvas">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#EE4792" xlink:href="#path-1"></use>
+            <g id="eye" mask="url(#mask-2)">
+                <g transform="translate(61.000000, 61.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Mask" stroke="none" fill="#ECECEC" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <circle id="Oval-1-Copy-2" stroke="none" fill="#FFFFFF" fill-rule="evenodd" mask="url(#mask-4)" cx="153.658199" cy="107.999993" r="137.014917"></circle>
+                    <g id="eye-ball" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" mask="url(#mask-4)">
+                        <g transform="translate(114.259694, 113.735814)">
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <use id="Combined-Shape" stroke="none" fill="#000000" fill-rule="evenodd" xlink:href="#path-5"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

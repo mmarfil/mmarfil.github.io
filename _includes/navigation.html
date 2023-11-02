@@ -1,0 +1,11 @@
+{% if page.url != "/" %}
+<nav class="main-nav">
+  <ul>
+    <li><a class="cta arrow-left"  href="{{ "/" | relative_url  }}">Home</a></li>
+    <li id="subscribe"></li> <!-- need this for the bottom menu to work for whatever reason -->
+  </ul>
+</nav>
+{% endif %}
+{% if page.url == "/" %}
+<nav class="main-nav"></nav>
+{% endif %}
