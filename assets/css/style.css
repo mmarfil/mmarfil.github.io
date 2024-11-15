@@ -501,6 +501,11 @@ code.highlighter-rouge {
 
 /* Home */
 
+.content {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
 .work-body img {
   margin-top: 30px;
 }
@@ -842,6 +847,10 @@ h2.headline {
 
   #wrapper {
     margin: 25px;
+  }
+  
+  .content {
+    padding-top: 0px;
   }
 
   .profile #wrapper {

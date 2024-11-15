@@ -8,30 +8,13 @@
   <meta content="{{ site.description }}" name="description">
   <meta property="og:description" content="Words" />
   <meta name="twitter:description" content="Words" />
-  {% if page.image == null %}
   <meta property="og:image" content="{{ site.url}}/assets/images/OG.png" />
   <meta name="twitter:image" content="{{ site.url }}/assets/images/OG.png" />
-  {% else %}
-  <meta property="og:image" content="{{ site.url }}/assets/images/posts/{{ page.date | date: "%Y-%m-%d" }}/{{ page.image }}" />
-  <meta name="twitter:image" content="{{ site.url }}/assets/images/posts/{{ page.date | date: "%Y-%m-%d" }}/{{ page.image }}" />
-  {% endif %}
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="{{ site.url }}" />
   <meta name="twitter:url" content="{{ site.url }}" />
   <meta name="twitter:site" content="@MarceloMarfil" />
-  {% if page.url == "/" %}
-  <meta property="og:title" content="{{ site.title }}" />
-  <meta name="twitter:title" content="{{ site.title }}" />
   <title>{{ site.title }}</title>
-  {% elsif paginator %}
-  <meta property="og:title" content="{{ site.title }} - Page {{ paginator.page }}" />
-  <meta name="twitter:title" content="{{ site.title }} - Page {{ paginator.page }}" />
-  <title>{{ site.title }} - Page {{ paginator.page }}</title>
-  {% else %}
-  <meta property="og:title" content="{{ site.title }} {% assign exist_or_not = page.title | size %} {% if exist_or_not < 1 %} - Status {% else %} - {{ page.title }} {% endif %}" />
-  <meta name="twitter:title" content="{{ site.title }} {% assign exist_or_not = page.title | size %} {% if exist_or_not < 1 %} - Status {% else %} - {{ page.title }} {% endif %}" />
-  <title>{{ site.title }} {% assign exist_or_not = page.title | size %} {% if exist_or_not < 1 %} - Status {% else %} - {{ page.title }} {% endif %}</title>
-  {% endif %}
   <link rel="preload" href="/assets/fonts/GT-W-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
   <link rel="preload" href="/assets/fonts/GT-W-Regular-Oblique.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
   <link rel="preload" href="/assets/fonts/GT-W-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
@@ -42,45 +25,36 @@
   <link href="/assets/css/highlight.css"rel="stylesheet">
   <link rel="icon" type="image/png" href="/assets/images/Favicon.png">
   <link rel="apple-touch-icon-precomposed" href="/assets/images/Icon.png">
-  <link href="/feed.json" title="{{ site.title }}" type="application/json" rel="alternate">
-  <link href="/feed.xml" title="{{ site.title }}" type="application/rss+xml" rel="alternate">
 </head>
 <body style="display: none">
-  {% include navigation.html %}
-  {% if page.profile %}
-  {% include profile.html %}
-  {% endif %}
-  <section id="wrapper"{% if page.url == "/about/" %} class="bio"{% endif %}>
-    {{ content }}
-  </section>
-  <footer id="footer">
-    {% include footer.html %}
-  </footer>
-<script>
-(function() {
-  var button = document.querySelector('#subscribe');
-  var menu = document.querySelector('#menu');
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    menu.classList.toggle('show');
-  });
-  document.addEventListener("click", function(){
-    menu.classList.remove('show');
-  });
-  })();
-{% if page.id %}(function() {
-  var button = document.querySelector('#subscribe-footer');
-  var menu = document.querySelector('#menu-footer');
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    menu.classList.toggle('show');
-  });
-  document.addEventListener("click", function(){
-    menu.classList.remove('show');
-  });
-  })();{% endif %}
-</script>
+  <div class="content">
+    <div class="profile">
+      <section id="wrapper">
+        <header class="h-card">
+          <div id="avatar">
+            <a href="/">
+              <img class="static u-photo" src="{{ "/" | relative_url  }}assets/images/Icon.png" />
+              <img class="eyeball" src="{{ "/" | relative_url  }}assets/images/eyeball.svg"/>
+              <img class="shadow" src="{{ "/" | relative_url  }}assets/images/shadow.svg"/>
+              <img class="globe" src="{{ "/" | relative_url  }}assets/images/globe.svg"/>
+            </a>
+          </div>
+          <h1 class="p-name">{{ site.author }}</h1>
+          <p>{{ site.description }}</p>
+        </header>
+      </section>
+    </div>
+    <section id="wrapper"{% if page.url == "/about/" %} class="bio"{% endif %}>
+      <div align="center" class="intro">
+        <p>I’m a Brazilian living in Aveiro, Portugal — and for the past eight years I’ve been designing <a href="https://sketch.com/">Sketch</a>, in Sketch.</p>
+        <p>Since 2008, I have worked with numerous independent developers and organizations, including Paramount Pictures, Snowman, SproutCore, Acrylic, AppZapper, The Echo Nest, Taptivate, SuperMegaUltraGroovy, Vemedio, and many others to bring products to millions across Earth.</p>
+        <br />
+        <p>
+          <a class="cta arrow-tr" href="&#109;&#097;&#105;&#108;&#116;&#111;&#58;s&#105;t&#101;&#064;m&#109;a&#114;&#102;&#105;&#108;&#046;c&#111;&#109;">Email</a> 
+          <a class="cta arrow-tr " href="https://x.com/marcelomarfil">Twitter</a>
+          <a class="cta arrow-tr " href="https://www.linkedin.com/in/marcelo-marfil">LinkedIn</a>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
