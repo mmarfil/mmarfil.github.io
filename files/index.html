@@ -2,43 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content="Marcelo Marfil" name="author">
-  <meta content="Product Architect" name="description">
-  <meta property="og:title" content="Marcelo Marfil" />
-  <meta property="og:description" content="Product Architect at Sketch. Design brain, now with dependencies." />
-  <meta name="twitter:title" content="Marcelo Marfil" />
-  <meta name="twitter:description" content="Product Architect at Sketch. Design brain, now with dependencies." />
-  <meta property="og:image" content="https://mmarfil.com/assets/images/OG.png" />
-  <meta name="twitter:image" content="https://mmarfil.com/assets/images/OG.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://mmarfil.com" />
-  <meta name="twitter:url" content="https://mmarfil.com" />
-  <meta name="twitter:site" content="@MarceloMarfil" />
-  <title>/files</title>
-  <link rel="preload" href="../assets/fonts/GT-W-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-  <link rel="preload" href="../assets/fonts/GT-W-Regular-Oblique.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-  <link rel="preload" href="../assets/fonts/GT-W-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-  <link rel="preload" href="../assets/fonts/GT-W-Medium-Oblique.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-  <link rel="preload" href="../assets/fonts/GT-W-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-  <link rel="preload" href="../assets/fonts/GT-W-Bold-Oblique.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-  <link href="../assets/css/style.css" rel="stylesheet">
-  <link href="../assets/css/highlight.css" rel="stylesheet">
+  <meta name="author" content="Marcelo Marfil">
+  <meta name="description" content="Files and downloads from Marcelo Marfil, a Brazilian product maker based in Aveiro, Portugal.">
+  <meta name="theme-color" content="#1d1229">
+  <meta property="og:title" content="Files — Marcelo Marfil">
+  <meta property="og:description" content="Files and downloads from Marcelo Marfil, a Brazilian product maker based in Aveiro, Portugal.">
+  <meta property="og:image" content="https://mmarfil.com/assets/images/OG.png">
+  <meta property="og:url" content="https://mmarfil.com/files/">
+  <meta name="twitter:title" content="Files — Marcelo Marfil">
+  <meta name="twitter:description" content="Files and downloads from Marcelo Marfil, a Brazilian product maker based in Aveiro, Portugal.">
+  <meta name="twitter:image" content="https://mmarfil.com/assets/images/OG.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@MarceloMarfil">
+  <title>Files — Marcelo Marfil</title>
+  <link rel="canonical" href="https://mmarfil.com/files/">
+  <link rel="preload" href="../assets/fonts/GT-W-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="../assets/fonts/GT-W-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="../assets/fonts/GT-W-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/home.css?v=no-motion-control">
   <link rel="icon" type="image/png" href="../assets/images/Favicon.png">
-  <link rel="apple-touch-icon-precomposed" href="../assets/images/Icon.png">
+  <link rel="apple-touch-icon" href="../assets/images/Icon.png">
+  <style>
+    .files { --accent-dark: var(--teal); --accent-light: rgba(97, 255, 202, .1); --accent-medium: rgba(97, 255, 202, .2); }
+    .files nav { margin-bottom: 48px; }
+    .files a[download] { color: var(--teal); }
+    .files h1 { color: var(--primary); font-size: 30px; line-height: 1.15; }
+    .files .back::before { position: relative; left: 0; transition: left 220ms ease; }
+    .files .back:is(:hover, :focus-visible)::before { left: -2px; }
+    @media (prefers-reduced-motion: reduce) {
+      .files .back, .files .back::before { transition: none; }
+      .files .back:is(:hover, :focus-visible)::before { left: 0; }
+    }
+  </style>
 </head>
 <body>
-  <div class="content">
-    <div class="">
-      <section id="wrapper">
-          <p><a href="../" class="cta arrow-left">Home</a></p>
-          <br  />
-          <br  />
-          <h1 class="p-name">/files</h1>
-          <p><a href="macmini-icon.zip">macmini-icon.zip</a></p>
-      </section>
-    </div>
-  </div>
+  <main class="content files">
+    <nav aria-label="Home"><a href="../" class="cta arrow-left back">Home</a></nav>
+    <h1>/files</h1>
+    <p><a href="macmini-icon.zip" download>macmini-icon.zip</a></p>
+  </main>
 </body>
 </html>
