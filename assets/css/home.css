@@ -26,7 +26,7 @@ a.cta:is(:hover, :focus-visible)::after { top: -2px; left: 2px; }
 .eye-lids { position: absolute; inset: 0; display: block; pointer-events: none; }
 .profile #avatar .globe, .profile #avatar .shadow, .profile #avatar .eyeball { top: 0; left: 0; }
 .profile #avatar .eyeball { margin-left: 35px; margin-top: 35px; animation-name: globe; }
-.cursor-pupil { position: absolute; inset: 0; z-index: 300; display: block; transform: translate(var(--cursor-x, 0px), var(--cursor-y, 0px)); transition: transform 140ms ease-out; pointer-events: none; }
+.cursor-pupil { position: absolute; inset: 0; z-index: 300; display: block; transform: translate(var(--cursor-x, 0px), var(--cursor-y, 0px)); transition: none; pointer-events: none; }
 .profile #avatar.is-reacting img, .motion-paused .profile #avatar img { animation: none; }
 .motion-paused .cursor-pupil { transform: none; transition: none; }
 

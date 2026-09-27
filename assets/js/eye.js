@@ -7,33 +7,63 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let frame = 0;
   let pointer = null;
+  let lastTime = 0;
+  let x = 0;
+  let y = 0;
   let reaction = [];
   const paused = () => reduced.matches;
 
-  function update() {
+  function update(time) {
     frame = 0;
-    if (paused() || !pointer) return;
-    const rect = eye.getBoundingClientRect();
-    const dx = pointer.x - rect.left - rect.width / 2;
-    const dy = pointer.y - rect.top - rect.height / 2;
-    const length = Math.hypot(dx, dy);
-    // Track around the eye's center, compensating for the down-right resting position.
-    const reach = Math.min(12, length / 25);
-    const restingOffset = 6.5;
-    pupil.style.setProperty('--cursor-x', `${dx / Math.max(1, length) * reach - restingOffset}px`);
-    pupil.style.setProperty('--cursor-y', `${dy / Math.max(1, length) * reach - restingOffset}px`);
+    if (paused()) return;
+    let targetX = 0;
+    let targetY = 0;
+    if (pointer) {
+      const rect = eye.getBoundingClientRect();
+      const dx = pointer.x - rect.left - rect.width / 2;
+      const dy = pointer.y - rect.top - rect.height / 2;
+      const length = Math.hypot(dx, dy);
+      // Track around the eye's center, compensating for the down-right resting position.
+      const reach = Math.min(12, length / 25);
+      const restingOffset = 6.5;
+      targetX = dx / Math.max(1, length) * reach - restingOffset;
+      targetY = dy / Math.max(1, length) * reach - restingOffset;
+    }
+    // Reach about 95% of the target in 135ms, regardless of refresh rate.
+    const blend = 1 - Math.exp(-Math.max(0, time - lastTime) / 45);
+    lastTime = time;
+    x += (targetX - x) * blend;
+    y += (targetY - y) * blend;
+    const settled = Math.hypot(targetX - x, targetY - y) < .01;
+    if (settled) {
+      x = targetX;
+      y = targetY;
+    }
+    pupil.style.setProperty('--cursor-x', `${x}px`);
+    pupil.style.setProperty('--cursor-y', `${y}px`);
+    // Finish the glide after pointer events stop, then leave the browser idle.
+    if (!settled) frame = requestAnimationFrame(update);
+  }
+
+  function startTracking() {
+    if (paused() || frame) return;
+    lastTime = performance.now();
+    frame = requestAnimationFrame(update);
   }
 
   function follow(event) {
     if (paused() || event.isPrimary === false) return;
     pointer = { x: event.clientX, y: event.clientY };
-    if (!frame) frame = requestAnimationFrame(update);
+    startTracking();
   }
 
   function reset() {
     cancelAnimationFrame(frame);
     frame = 0;
     pointer = null;
+    lastTime = 0;
+    x = 0;
+    y = 0;
     pupil.style.removeProperty('--cursor-x');
     pupil.style.removeProperty('--cursor-y');
   }
@@ -107,7 +137,10 @@
 
   document.addEventListener('pointermove', follow, { passive: true });
   document.addEventListener('pointerdown', follow, { passive: true });
-  document.documentElement.addEventListener('pointerleave', reset);
+  document.documentElement.addEventListener('pointerleave', () => {
+    pointer = null;
+    startTracking();
+  });
   window.addEventListener('blur', () => { reset(); stopReaction(); });
   reduced.addEventListener('change', sync);
   trigger.addEventListener('click', poke);
